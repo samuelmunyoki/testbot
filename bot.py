@@ -30,7 +30,7 @@ async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
 
-app = ApplicationBuilder().token("6532185799:AAGGRGm1mtRu8uY3_5o2LucTAj6Xaqkdha8").base_url("http://localhost:8081").local_mode(True).build()
+app = ApplicationBuilder().token("6532185799:AAGGRGm1mtRu8uY3_5o2LucTAj6Xaqkdha8").base_url("http://localhost:8081/").local_mode(True).build()
 # app = ApplicationBuilder().token("6532185799:AAGGRGm1mtRu8uY3_5o2LucTAj6Xaqkdha8").build()
 
 app.add_handler(CommandHandler("hello", hello))
